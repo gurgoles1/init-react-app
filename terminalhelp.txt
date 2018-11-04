@@ -1,0 +1,8 @@
+Skapa textfil: > filnamn.txt
+Uppgradera alla installerade paket: apt-get upgrade
+sudo: Utför dess nästkommande kommando med root.
+sudo -s: Bli root för alla nästkommande kommandon.
+apt-get: Används i linux för att installera, ta bort, uppdatera mjukvara,
+Öppna mjukvara: Skriv bara namnet på mjukvaran.
+Öppna fil från terminal: xdg-open -filnamn
+Ta bort fil: rm -filnamn

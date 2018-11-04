@@ -1,0 +1,24 @@
+*What is jsx??: Är en fil som låter en inkludera xml i
+javascript (html är xml). Processas sedan till javascript anrop vid kompilering.
+I princip så kan man inkludera React komponent i html.
+
+*Jsx är inte javascript utan blir som sagt det endast vid kompilering.
+Detta gör att man inte kan debugga det i browsern elr använda lint på det t.ex.
+
+*Spread operator (...) kan användas på jsx. Ex: Om har komponent Sum
+const props = {a: "hej", b: "hej"}  <Sum {...props}>
+
+*Props (attributer på jsx element) kan förutom att vara data också vara funktioner
+som man sedan kan göra något med i komponeterna.
+
+*Jsx attribut namn är ändrade mot html. Detta gör att t.ex for i js är
+htmlFor i Jsx och class i html är className i jsx. Style attributen tar
+till skillnad från i html ett json objekt med nyckel som det det man vil stylea
+och värdet som det värde man vill ge den. Ex: <label className="hej" style={{color: "yellow"}}/>
+Tänk på dubbel curlys.
+
+*Html attributen dangerouslysetInnerHtml är till för att undvika cross site scripting
+attacker. Kolla mer om intresserad!!!
+
+*Nyckeln props.children inuti en komponent gör att man får tag i komponentens children.
+ 

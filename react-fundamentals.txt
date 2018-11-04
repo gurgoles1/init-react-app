@@ -1,0 +1,51 @@
+*Virtual dom: Används för att kunna manipulera och göra operationer
+på en absraktion på den riktiga domen (som också är en abstraktion)
+vilket är snabbare, för att sedan sätta in skillnader i riktiga domen.
+ReactElement är en komponent i virtuella domen utan state. ReactComponent
+är en komponent med state som inte har connection till virtuella domen.
+
+*Jobbar med komponenter som har state för att vara dynamiska mot andra komponenter.
+Exempelvis om ett val i lista ska trigga att man kan trycka på en knapp så har
+den knappen flera state.
+
+*React följer one way data binding. Vilket betyder att om man t.ex
+skickar data åt ena hållet så går det inte att skicka tillbaka samma väg.
+Detta är mest ett val för att hålla nere komplexiteten.
+
+*React är inte ett helt UI ramverk utan mer ett ramverk för att rendera UI och
+hantera event. Det har alltså inte hantering av state, routing, med mera.
+
+*Komponenter ska hantera alla event som sker i dem. De kan dessutom vara nästlade,
+alltså komponenter i komponenter. Egendefinerade komponenter måste börja med
+stor bokstav. Kan skrivas som funktion eller klass komponenter. En funktion komponenter
+är function(props) {"Komponent kod"} medans en klass måste extenda React.Component
+och sedan retunera sin komponent i render() funktionen.
+
+*Klass komponent harflera livscykel metoder som kallas vid olika tidpunkter under dess livscykel.
+Exempelvis den vanliga render men också componentDidMount, componentDidUpdate,
+componentWillReceiveProps, m.m. Did metoder kallas precis efter dess operation och
+Will metoder precis innan.
+
+*State, muterbar data kan finnas i komponenter. Sådan state ökar en komponents
+komplexitet. I en klass komponent så sätter man state i dess konstruktor (tar
+props som parameter) genom this.state = "Objekt med state värden". Man använder
+state för att den är intern. Sätter nytt state genom this.setState(objekt) och hämtar
+genom this.state.(state parameter). this.setState(objekt) tar inte bort state som
+inte uppdateras. DET ÄR DOCK ATT FÖREDRA ATT CENTRALISERA STATE HANTERING.
+
+*Props är alltså immutable data som skickas till komponenterna (immutable för
+att de bara kan skickas ned). State är mutable data som bara finns internt i komponenten.
+
+*Man kan för en komponent lägga till validering på de värden som skickas in
+genom att definera ett propTypes objekt. Ex: {a: PropTypes.number}
+kräver nu att parametern a som skickas in är ett nummer. PropTypes måste installeras
+och importeras från ett separat paket. Finns dessutom validering för att en parameter finns,
+kustomiserad validering, m.m.
+
+*Jest kommer med create-react-app. Om en fil har .test.js så hittar jest det för
+test.
+
+*Enzyme är ett test verktyg/addon för att skriva test bättre med react
+då man kan rendera komponenter lättare (KOLLA MER FÖR VAD EGENTLIGEN GÖR!!!).
+
+*

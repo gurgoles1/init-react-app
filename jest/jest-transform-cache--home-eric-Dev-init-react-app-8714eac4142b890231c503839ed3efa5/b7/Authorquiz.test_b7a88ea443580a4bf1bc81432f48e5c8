@@ -1,0 +1,24 @@
+/* istanbul ignore next */'use strict';var _jsxFileName = '/home/eric/Dev/init-react-app/src/Authorquiz.test.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactDom = require('react-dom'); /* istanbul ignore next */var _reactDom2 = _interopRequireDefault(_reactDom);
+var /* istanbul ignore next */_Authorquiz = require('./Authorquiz'); /* istanbul ignore next */var _Authorquiz2 = _interopRequireDefault(_Authorquiz);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function Hello(props) {
+  return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 6 }, __self: this }, /* istanbul ignore next */' Hello ', props.name, /* istanbul ignore next */' '));
+}
+
+describe('Hello', function () {
+  var result = /* istanbul ignore next */void 0;
+  beforeAll(function () {
+    result = Hello({ name: "Eric" });
+  });
+
+  it('should render', function () {
+    expect(result.type).toBe("h1");
+    expect(result.props.children.name).toBe("Eric");
+  });
+});
+
+it('renders without crashing', function () {
+  var div = document.createElement('div');
+  /* istanbul ignore next */_reactDom2. /* istanbul ignore next */default.render( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Authorquiz2. /* istanbul ignore next */default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: undefined }), div);
+});
